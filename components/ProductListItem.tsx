@@ -6,7 +6,7 @@ type ProductListItemProps = {
   product: Product;
 };
 
-const defaultImage =
+export const defaultPictureImage =
   "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/peperoni.png";
 
 const ProductListItem = ({ product }: ProductListItemProps) => {
@@ -14,7 +14,7 @@ const ProductListItem = ({ product }: ProductListItemProps) => {
     <Link href={`/menu/${product.id}`} asChild>
       <Pressable style={styles.container}>
         <Image
-          source={{ uri: product.image ?? defaultImage }}
+          source={{ uri: product.image ?? defaultPictureImage }}
           style={styles.image}
           resizeMode="contain"
         />
